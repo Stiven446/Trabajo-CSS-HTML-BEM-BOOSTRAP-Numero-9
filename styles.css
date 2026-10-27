@@ -1,0 +1,145 @@
+/* Variables y Estilos Generales */
+:root {
+  --primary-color: #2c98f0;
+  --text-dark: #000000;
+  --text-muted: #808080;
+  --bg-sidebar: #f2f3f7;
+  --font-main: 'Quicksand', sans-serif;
+  --font-title: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #ffffff;
+  color: var(--text-muted);
+}
+
+/* ===================================
+   Sidebar (BEM: .sidebar)
+   =================================== */
+.sidebar {
+  background-color: var(--bg-sidebar);
+  min-height: 100vh;
+  border-right: 1px solid #e6e6e6;
+}
+
+.sidebar__avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.sidebar__name {
+  font-family: var(--font-title);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 10px;
+}
+
+.sidebar__role {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.sidebar__role-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar__link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar__link:hover,
+.sidebar__link--active {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.sidebar__footer {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.sidebar__icon-heart {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar__source-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* ===================================
+   Hero Section (BEM: .hero-section)
+   =================================== */
+.hero-section {
+  min-height: 100vh;
+  /* Imagen de fondo del hombre con la camisa */
+  background: url('https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1200&auto=format&fit=crop') no-repeat center right / cover;
+  background-color: #f7f7f7;
+}
+
+.hero-section__content {
+  max-width: 500px;
+}
+
+.hero-section__title,
+.hero-section__subtitle {
+  font-family: var(--font-title);
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.hero-section__description {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.hero-section__btn {
+  border: 1px solid var(--text-dark);
+  border-radius: 0;
+  padding: 12px 28px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--text-dark);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-section__btn:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+.hero-section__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-section__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hero-section__dot--active {
+  background-color: var(--primary-color);
+}
